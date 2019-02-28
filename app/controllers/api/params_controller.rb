@@ -30,4 +30,21 @@ class Api::ParamsController < ApplicationController
     end
     render 'game_view.json.jbuilder'
   end
+
+  def segment
+    p "#" * 70
+    p params
+    p "#" * 70
+
+    user_input = params[:guess].to_i
+    answer = 50
+    if user_input > answer
+      @message = "Hey you guessed too high"
+    elsif user_input < answer
+      @message = "too low sucka"
+    else 
+      @message = "Congrats! You won!"
+    end
+    render 'segment_view.json.jbuilder'
+  end
 end

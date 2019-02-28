@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   namespace :api do 
     get'/parameters' => 'params#name'
     get'/guess_game' => 'params#guess'
+    get'/segment_route/:guess' => 'params#segment'
   end
 end
