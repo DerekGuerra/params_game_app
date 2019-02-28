@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   # namespace :api do
   #   get "/photos" => "photos#index"
   # end
+  namespace :api do 
+    get'/parameters' => 'params#name'
+    get'/guess_game' => 'params#guess'
+  end
 end
